@@ -19,4 +19,12 @@ class StatisticsServiceTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxAmongBigger() {
+        StatisticsService service = new StatisticsService();
+        long[] incomesInBillions = {5, 445, 2777, 0, 2, 14, 1566};
+        assertEquals(2777, service.findMax(incomesInBillions));
+
+    }
 }
